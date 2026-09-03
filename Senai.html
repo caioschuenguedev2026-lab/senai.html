@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seu Futuro Começa com Código - SENAI</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f2;
+    color: #222;
+}
+
+/* MENU */
+
+header {
+    background: #e30613;
+    color: white;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    padding: 8px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 95px;
+}
+
+.logo h3 {
+    margin: 0;
+    font-size: 12px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    opacity: .7;
+}
+
+/* INÍCIO */
+
+.inicio {
+    min-height: 500px;
+    padding: 55px 8%;
+    background: #151515;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.inicio-texto {
+    max-width: 480px;
+}
+
+.mini,
+.titulo {
+    color: #e30613;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.inicio h1 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin: 12px 0;
+}
+
+.inicio p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #e30613;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background: white;
+    color: #e30613;
+}
+
+/* IMAGENS */
+
+.imagem {
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SEÇÕES */
+
+section {
+    padding: 50px 8%;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 24px;
+    margin: 8px 0 15px;
+}
+
+section p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* CURSO */
+
+.curso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.curso-texto {
+    max-width: 550px;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    padding: 16px;
+    border-top: 3px solid #e30613;
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    margin: 0 0 7px;
+    font-size: 15px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 11px;
+    color: #555;
+}
+
+/* APRENDER FAZENDO */
+
+.escuro {
+    background: #181818;
+    color: white;
+}
+
+.aprender {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.lista div {
+    padding: 8px 11px;
+    border: 1px solid #555;
+    font-size: 10px;
+}
+
+.lista div:hover {
+    background: #e30613;
+    border-color: #e30613;
+}
+
+/* DESAFIOS */
+
+.intro {
+    max-width: 650px;
+}
+
+/* CARREIRAS */
+
+.carreiras .cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* FINAL */
+
+.final {
+    background: #e30613;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.final h2 {
+    font-size: 25px;
+    margin: 0 0 8px;
+}
+
+.final p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 9px;
+}
+
+/* CELULAR */
+
+@media (max-width: 750px) {
+
+    .menu {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio,
+    .curso,
+    .aprender {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .inicio {
+        padding: 45px 6%;
+    }
+
+    .inicio-texto {
+        margin: auto;
+    }
+
+    .inicio h1 {
+        font-size: 30px;
+    }
+
+    .imagem {
+        height: 250px;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+
+    section h2 {
+        font-size: 21px;
+    }
+
+    .cards,
+    .carreiras .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<header>
+
+    <div class="menu">
+
+        <div class="logo">
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/8c/SENAI_S%C3%A3o_Paulo_logo.png"
+                alt="Logo SENAI"
+            >
+
+            <h3>
+                ADS - Análise e Desenvolvimento de Sistemas
+            </h3>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+
+                <li>
+                    <a href="#curso">Curso</a>
+                </li>
+
+                <li>
+                    <a href="#aprender">Prática</a>
+                </li>
+
+                <li>
+                    <a href="#desafios">Desafios</a>
+                </li>
+
+                <li>
+                    <a href="#carreiras">Carreiras</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- INÍCIO
+     IMAGEM 3 - GLOBO -->
+
+<div class="inicio" id="inicio">
+
+    <div class="inicio-texto">
+
+        <p class="mini">
+            SENAI • DESENVOLVIMENTO DE SISTEMAS
+        </p>
+
+        <h1>
+            Seu futuro começa com código.
+        </h1>
+
+        <p>
+            Transforme ideias em soluções e descubra
+            como a tecnologia pode fazer parte do seu futuro.
+        </p>
+
+        <a href="#curso" class="botao">
+            CONHEÇA O CURSO
+        </a>
+
+    </div>
+
+    <div class="imagem">
+
+        <img
+            src="https://s2-g1.glbimg.com/H9WhawNQW5uQG7LUUhoSfYoHvYo=/0x0:448x304/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/Y/p/Aeb8m2QKKj0RDh6o6y0w/imageviewer.jpg"
+            alt="Tecnologia e educação"
+        >
+
+    </div>
+
+</div>
+
+
+<!-- CURSO
+     IMAGEM 1 - LINKEDIN -->
+
+<section id="curso">
+
+    <div class="conteudo">
+
+        <div class="curso">
+
+            <div class="curso-texto">
+
+                <p class="titulo">
+                    SOBRE O CURSO
+                </p>
+
+                <h2>
+                    Mais do que aprender a programar.
+                </h2>
+
+                <p>
+                    O Curso Técnico em Desenvolvimento de Sistemas
+                    prepara profissionais para desenvolver, testar
+                    e implantar sistemas computacionais.
+                </p>
+
+                <p>
+                    A formação combina conhecimentos técnicos,
+                    projetos e atividades práticas.
+                </p>
+
+            </div>
+
+            <div class="imagem">
+
+                <img
+                    src="https://media.licdn.com/dms/image/v2/D4D22AQGc82PG5iE8Uw/feedshare-shrink_800/B4DZ26O23TJYAc-/0/1776945950582?e=2147483647&v=beta&t=3PVjDVUTYSuSJ-9FXwe15XPQLPzskTVga13K-tXE_Vs"
+                    alt="Desenvolvimento de sistemas"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Lógica de Programação</h3>
+                <p>Desenvolvimento do raciocínio lógico.</p>
+            </div>
+
+            <div class="card">
+                <h3>Front-End</h3>
+                <p>Criação da parte visual dos sistemas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Back-End</h3>
+                <p>Funcionamento e estrutura dos sistemas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Banco de Dados</h3>
+                <p>Organização e armazenamento de informações.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mobile</h3>
+                <p>Desenvolvimento para dispositivos móveis.</p>
+            </div>
+
+            <div class="card">
+                <h3>IoT</h3>
+                <p>Conexão entre dispositivos e sistemas.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APRENDER FAZENDO
+     IMAGEM 2 - GOOGLE -->
+
+<section id="aprender" class="escuro">
+
+    <div class="conteudo">
+
+        <div class="aprender">
+
+            <div class="imagem">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJKWr929rihQK6mjHOQizXnbBUhI-Q68MNIZ29lPXzaD_jnivsA1MO8ME&s=10"
+                    alt="Tecnologia"
+                >
+
+            </div>
+
+            <div>
+
+                <p class="titulo">
+                    APRENDER FAZENDO
+                </p>
+
+                <h2>
+                    Conhecimento colocado em prática.
+                </h2>
+
+                <p>
+                    No SENAI, o estudante aprende através
+                    de projetos, desafios e situações práticas.
+                </p>
+
+                <div class="lista">
+
+                    <div>Projetos</div>
+                    <div>Desafios</div>
+                    <div>Hackathons</div>
+                    <div>Feiras Tecnológicas</div>
+                    <div>Apresentações</div>
+                    <div>Soluções reais</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DESAFIOS -->
+
+<section id="desafios">
+
+    <div class="conteudo">
+
+        <div class="intro">
+
+            <p class="titulo">
+                DESAFIOS REAIS
+            </p>
+
+            <h2>
+                Nem sempre será fácil.
+            </h2>
+
+            <p>
+                O curso exige dedicação, organização e
+                disposição para aprender continuamente.
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Organização</h3>
+                <p>Organizar tarefas e administrar o tempo.</p>
+            </div>
+
+            <div class="card">
+                <h3>Trabalho em equipe</h3>
+                <p>Colaborar e dividir responsabilidades.</p>
+            </div>
+
+            <div class="card">
+                <h3>Prazos</h3>
+                <p>Entregar atividades no tempo determinado.</p>
+            </div>
+
+            <div class="card">
+                <h3>Resolução de problemas</h3>
+                <p>Encontrar soluções para diferentes desafios.</p>
+            </div>
+
+            <div class="card">
+                <h3>Autonomia</h3>
+                <p>Pesquisar e buscar conhecimento.</p>
+            </div>
+
+            <div class="card">
+                <h3>Aprendizagem contínua</h3>
+                <p>Continuar aprendendo novas tecnologias.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CARREIRAS -->
+
+<section id="carreiras" class="escuro carreiras">
+
+    <div class="conteudo">
+
+        <p class="titulo">
+            OPORTUNIDADES
+        </p>
+
+        <h2>
+            Onde o código pode te levar?
+        </h2>
+
+        <p>
+            A área de tecnologia oferece diferentes
+            possibilidades profissionais.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Desenvolvedor Web</h3>
+                <p>Criação de sites e aplicações web.</p>
+            </div>
+
+            <div class="card">
+                <h3>Desenvolvedor de Sistemas</h3>
+                <p>Desenvolvimento de sistemas computacionais.</p>
+            </div>
+
+            <div class="card">
+                <h3>Analista de Qualidade</h3>
+                <p>Testes e verificação dos softwares.</p>
+            </div>
+
+            <div class="card">
+                <h3>Service Desk</h3>
+                <p>Suporte e solução de problemas.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DIFERENCIAIS -->
+
+<section>
+
+    <div class="conteudo">
+
+        <p class="titulo">
+            DIFERENCIAIS DO SENAI
+        </p>
+
+        <h2>
+            Aprender como um profissional.
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Laboratórios</h3>
+                <p>Espaços para colocar conhecimentos em prática.</p>
+            </div>
+
+            <div class="card">
+                <h3>Ambiente colaborativo</h3>
+                <p>Aprendizado e trabalho em equipe.</p>
+            </div>
+
+            <div class="card">
+                <h3>Projetos integradores</h3>
+                <p>Integração de diferentes conhecimentos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Conexão com a indústria</h3>
+                <p>Formação relacionada ao mercado de trabalho.</p>
+            </div>
+
+            <div class="card">
+                <h3>Metodologias ágeis</h3>
+                <p>Organização e desenvolvimento colaborativo.</p>
+            </div>
+
+            <div class="card">
+                <h3>Competências</h3>
+                <p>Criatividade, autonomia, comunicação e resiliência.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <h2>
+        Seu futuro começa com código.
+    </h2>
+
+    <p>
+        Você não precisa saber tudo para começar.
+        Precisa estar disposto a aprender.
+    </p>
+
+</section>
+
+
+<!-- RODAPÉ -->
+
+<footer>
+
+    <p>SENAI | SESI Mangal</p>
+
+    <p>
+        Curso Técnico em Desenvolvimento de Sistemas
+    </p>
+
+    <p>
+        © 2026 - SENAI
+    </p>
+
+</footer>
+
+</body>
+
+</html>
